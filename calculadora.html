@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+    <style>
+        *{ 
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-image: linear-gradient(to left, #ff8661, #ff6427, #ffa86d);
+        }
+        input{
+            font-size: 24px;
+            font-weight: bold;
+            width: 260px;
+            padding: 20px 40px;
+            border: 2px solid rgb(255, 214, 160);
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        .historico{
+            background-color: #c0b1b1;
+            border: 2px solid #8b7c7c;
+            margin-bottom: -2px;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .calculadora{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 98px;
+            width: 400px;
+            height: 600px;
+            background-color: #857f7f;
+            border-radius: 50px;
+            box-shadow: 0 10px 10px 0 #ca4f1e;
+        }
+        button{
+            cursor: pointer;
+            height: 60px;
+            width: 60px;
+            margin: 10px 2px 1px 1px;
+            border-radius: 45px;
+            border: 2px solid #ffa6008e;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #fcfaf4;
+            box-shadow: 0 4px #ffc2508e;
+            transition: .4s;
+        }
+        button:active{
+            transform: translateY(0.5vh);
+            box-shadow: 0 2px #ffc2508e;
+        }
+        button:hover{
+            background-color: #fcaa74;
+            color: #ffffff;
+        }
+        .igual{ 
+            position: absolute;
+            top: 540px;
+            margin-left: 203px;
+            height: 135px;
+            border-radius: 20px;
+            background-color: #ddccc6;
+            color: #ffffff;
+            font-weight: 900;
+        }
+        .numeros{
+            margin-right: 68px;
+        }
+        .simbolo{
+            background-color: #ddccc6;
+            color: #ffffff;
+            font-weight: 900;
+        }
+        .C{
+            background-color: #ddccc6;
+            color: #fcfaf4;
+            font-weight: 900;
+            width: 130.4px;
+            border-radius: 30px;
+        }
+        h3{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            position: absolute;
+            color: #ffffff;
+            bottom: 0;
+            margin-bottom: 50px;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to left, #ff825c, #ff4800, #ffa061);
+            width: 100%;
+            height: 100px;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .minimenu{
+            font-size: 24px;
+            cursor: pointer;
+            transition: .8s;
+        }
+        .minimenu ion-icon{ 
+            position: absolute;
+            margin: 1px 0 0 4px;
+            font-size: 35px;
+            transition: .5s;
+        }
+        .minimenu.ativo ion-icon{
+            transform: rotate(179deg);
+        }
+        .menu{
+            top: 20px;
+            position: absolute;
+            margin-top: 54px;
+            opacity: 0;
+            visibility: hidden;
+            transition: .2s;
+        }
+        .menu.ativo{
+            position: absolute;
+            top: 100px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fcaa74;
+            width: 100%;
+            height: 90px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        li{
+            margin-bottom: 5px;
+        }
+        @media only screen and (max-device-width: 900px) {
+            .calculadora{
+                margin-top: 30px;
+                width: 800px;
+                height: 1400px;
+            }
+            button{
+                width: 170px;
+                height: 180px;
+                margin: 10px 10px 10px 3px;
+                font-size: 60px;
+            }
+            .igual{
+                top: 925px;
+                margin-left: 565px;
+                height: 375px;
+            }
+            .numeros{
+                margin-right: 189px;
+            }
+            .C{
+                width: 360px;
+            }
+            input{
+                width: 520px;
+                height: 80px;
+                font-size: 60px;
+                font-weight: 100;
+            }
+            .conta{
+                height: 120px;
+            }
+            h3{
+                font-size: 50px;
+            }
+            nav{
+                height: 150px;
+            }
+            .minimenu{
+                font-size: 45px;
+            }
+            .minimenu ion-icon{
+                margin-top: 12px;
+                font-size: 45px;
+            }
+            .menu.ativo{
+                top: 150px;
+                height: 180px;
+                font-size: 35px;
+            }
+        }
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="minimenu">Outros Calculos<ion-icon name="chevron-down-outline"></ion-icon></div>
+    </nav>    
+<div class="container">
+    <div class="menu">
+        <ul>
+            <li><a href="hipotenusa.html">Calculador de Hipotenusa</a></li>
+            <li><a href="tabuada.html">Gerador de Tabuada</a></li>
+        </ul>
+    </div>
+<div class="calculadora">
+    <input type="text" id="historico" class="historico" disabled>
+    <input type="text" id="conta" class="conta" readonly>
+    <div>
+        <button onclick="Sinal('√')" class="simbolo">√</button>
+        <button onclick="Sinal('/')" class="simbolo">/</button>
+        <button onclick="Sinal('*')" class="simbolo">x</button>
+        <button onclick="Sinal('-')" class="simbolo">-</button>
+    </div>
+    <div>
+        <button onclick="Num(1)">1</button>
+        <button onclick="Num(2)">2</button>
+        <button onclick="Num(3)">3</button>
+        <button onclick="Sinal('+')" class="simbolo">+</button>
+    </div>
+    <div class="numeros">
+        <button onclick="Num(4)">4</button>
+        <button onclick="Num(5)">5</button>
+        <button onclick="Num(6)">6</button>
+    </div>
+    <button onclick="Igual()" class="igual">=</button>
+    <div class="numeros">   
+        <button onclick="Num(7)">7</button>
+        <button onclick="Num(8)">8</button>
+        <button onclick="Num(9)">9</button>
+    </div>
+    <div>
+        <button onclick="Num('.')" class="simbolo">.</button>
+        <button onclick="Num(0)">0</button>
+        <button onclick="Clear()" class="C">C</button>
+    </div>
+</div>
+    <h3>Developed by StitchJaooo :)</h3>
+</div>
+<script>
+const minimenu = document.querySelector('.minimenu');
+const menu = document.querySelector('.menu');        
+minimenu.onclick = function() {
+        minimenu.classList.toggle('ativo');
+        menu.classList.toggle('ativo');
+}
+let num1 = '';
+let sinal = '';
+let num2 = '';
+let result = '';
+function Conta() {
+    document.getElementById('conta').value = num1;
+    document.getElementById('historico').value = num2+" "+sinal;
+}
+function ContaFinal(){
+    document.getElementById('conta').value = result;
+    document.getElementById('historico').value = num2+" "+sinal+" "+num1;
+}
+function Num(number) {
+    num1 += number;
+    Conta();
+}
+function Sinal(si) {
+    sinal = si;
+    num2 = num1;
+    if (sinal=='√') {
+        num1=Math.sqrt(num1);
+        Conta();
+    }else{    
+        num1 = '';
+        Conta();
+    }
+}
+function Igual() {
+    if (num1 !== '' && num2 !== '') {
+        switch (sinal) {
+            case '+':
+                result = parseFloat(num2) + parseFloat(num1);
+            break;
+            case '-':
+                result = parseFloat(num2) - parseFloat(num1);
+            break;
+            case '*':
+                result = parseFloat(num2) * parseFloat(num1);
+            break;
+            case '/':
+                result = parseFloat(num2) / parseFloat(num1);
+            break;
+    }
+    ContaFinal();
+    num1 = result.toString();
+    }
+}
+function Clear() {
+    result = '';
+    num1 = '';
+    sinal = '';
+    num2 = '';
+    Conta();
+}
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
