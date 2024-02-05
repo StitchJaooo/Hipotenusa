@@ -1,0 +1,184 @@
+*{ 
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: linear-gradient(to left, #ff8661, #ff6427, #ffa86d);
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input{
+    font-weight: bold;
+    width: 260px;
+    padding: 20px 40px;
+    border: 2px solid rgb(255, 214, 160);
+    border-radius: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 20px;
+}
+button {
+    color: #ffffffde;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-image: linear-gradient(to left, #ff3636, #ff3b3b, #ff5858);
+    transition: .8s;
+}
+button:active{
+    transform: scale(0.9);
+}
+button:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+    background-color: #ff3838;
+}
+input{
+    font-weight: bold;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 24px;
+}
+h1{
+    font-size: 30px;
+    margin: 40px 0px 40px 0px;
+}
+h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.calculador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 600px;
+    background-color: #857f7f;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px 0 #ca4f1e;
+    margin: 0px 20px 0px 20px;
+}
+.resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px 0px 20px;
+    width: 600px;
+    height: 600px;
+    background-color: #b3b3b3;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px 0 #ca4f1e;
+}
+.triangulo{
+    border-left: 200px solid transparent;
+    border-bottom: 200px solid #ffffff;
+    margin-bottom: 40px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+#contaUm, #contaDois, #contaTres, #contaFinal {
+    margin-top: 6px;
+    font-size: 35px;
+}
+h3{
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.hipo{
+    position: relative;
+    right: 22px;
+    top: 168px;
+    font-size: 25px;
+    transform: rotate(-46deg);
+}
+.cat1{
+    position: relative;
+    top: 258px;
+    font-size: 25px;
+}
+.cat2{
+    position: relative;
+    top: 130px;
+    left: 116px;
+    font-size: 25px;
+    transform: rotate(90deg);
+}
+input:focus, button:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+input:focus{
+    border: 2px solid #ff5825;
+}
+@media screen and (max-width: 900px) {
+.calculador{
+    width: 80%;
+    height: 740px;
+    margin-bottom: 80px;
+}
+.resultado{
+    width: 80%;
+    height: 770px;
+    margin-bottom: 120px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 50px;
+}
+h2{
+    font-size: 50px;
+    margin-top: 18px;
+}
+h3{
+    font-size: 45px;
+}
+input{
+    width: 80%;
+    height: 80px;
+    font-size: 60px;
+    font-weight: 100;
+}
+button{
+    margin-top: 10px;
+    width: 80%;
+    height: 100px;
+    font-size: 40px;
+    font-weight: 100;
+}
+.hipo{
+    font-size: 45px;
+}
+.cat1{
+    font-size: 45px;
+    top: 320px;
+}
+.cat2{
+    top: 95px;
+    font-size: 45px;
+    margin-left: 130px;
+}
+#contaUm, #contaDois, #contaTres, #contaFinal {
+    font-size: 50px;
+}
+.triangulo{
+    border-left: 310px solid transparent;
+    border-bottom: 310px solid #ffffff;
+    margin-bottom: 50px;
+    margin-top: -90px;
+}
+}
