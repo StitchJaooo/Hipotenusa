@@ -120,7 +120,7 @@ input:focus, button:focus{
 input:focus{
     border: 2px solid #ff5825;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
 .calculador{
     width: 80%;
     height: 740px;
